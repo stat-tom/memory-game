@@ -7,26 +7,12 @@ class Game extends React.Component {
   constructor(props) {
     super(props);
     this.onCardClicked = this.onCardClicked.bind(this);
-    this.lvlEasy = this.lvlEasy.bind(this);
-    this.lvlMedium = this.lvlMedium.bind(this);
-    this.lvlHard = this.lvlHard.bind(this);
     this.allCards = new Cards();
+    this.lvlCreate = this.lvlCreate.bind(this)
   }
 
   componentWillMount() {
-    this.startGame();
-  }
-
-  // Generate the game board and set the game state
-  startGame() {
-    this.allCards.createCardSetEasy();
-    this.setState({
-      turnsCounter: 1,
-      pairsCounter: 0,
-      clicksInATurn: 0,
-      firstId: undefined,
-      secondId: undefined
-    });
+    this.lvlCreate(6);
   }
 
   // Set view of the game board
@@ -99,24 +85,8 @@ class Game extends React.Component {
     }
   }
 
-  // Choose game level or start a new game
-  lvlEasy() {
-    this.startGame();
-  }
-
-  lvlMedium() {
-    this.allCards.createCardSetMedium();
-    this.setState({
-      turnsCounter: 1,
-      pairsCounter: 0,
-      clicksInATurn: 0,
-      firstId: undefined,
-      secondId: undefined
-    });
-  }
-
-  lvlHard() {
-    this.allCards.createCardSetHard();
+  lvlCreate(level) {
+    this.allCards.createCardSet(level);
     this.setState({
       turnsCounter: 1,
       pairsCounter: 0,
@@ -143,9 +113,9 @@ class Game extends React.Component {
           {gameStatus}
         </div>
         <div className='Lvl-button'>
-          <button id="easy" onClick={this.lvlEasy}>Easy</button> 
-          <button id="medium" onClick={this.lvlMedium}>Medium</button> 
-          <button id="hard" onClick={this.lvlHard}>Hard</button>
+          <button onClick={() => this.lvlCreate(6)}>Easy</button> 
+          <button onClick={() => this.lvlCreate(8)}>Medium</button> 
+          <button onClick={() => this.lvlCreate(10)}>Hard</button>
         </div>
         <div className='Card-container'>
           {gameBoard}
