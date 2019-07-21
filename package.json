@@ -33,7 +33,5 @@
   "devDependencies": {
     "@babel/preset-env": "^7.3.4"
   },
-  "homepage": {
-    "https://ridingtom.github.io/memory-game/"
-  }
+  "homepage": "https://ridingtom.github.io/memory-game/"
 }
