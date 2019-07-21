@@ -57,5 +57,7 @@
 } 
 
 .Lvl-button button:hover {
+  color: #293b6d;
+  background: #fff;
   font-weight: bold;
 }
