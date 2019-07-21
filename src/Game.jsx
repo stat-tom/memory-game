@@ -8,7 +8,6 @@ class Game extends React.Component {
     super(props);
     this.onCardClicked = this.onCardClicked.bind(this);
     this.lvlCreate = this.lvlCreate.bind(this);
-    /* this.startNextLvl = this.startNextLvl.bind(this); */
     this.cards = [];
   }
 
@@ -148,16 +147,6 @@ class Game extends React.Component {
       secondId: undefined
     });
   }
-
-  // All pairs found
-/*   startNextLvl() {
-    if (this.state.pairsCounter === this.lvlCreate(6)) {  
-        return this.lvlCreate(8);
-    } else if (this.state.pairsCounter === this.lvlCreate(8)) {
-        return this.lvlCreate(10);
-    } else {
-        return this.lvlCreate(6);
-  } */
 
   // Show game score
   render() {
