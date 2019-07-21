@@ -36,7 +36,7 @@
 }
 
 .Matched {
-  border-color: #B084CC;
+  border-color: #293b6d;
 }
 
 .Card-container {
@@ -61,4 +61,5 @@
   color: #293b6d;
   background: #fff;
   font-weight: bold;
+  border-color: #293b6d;
 }
