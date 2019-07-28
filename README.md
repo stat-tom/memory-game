@@ -23,4 +23,4 @@ The application allows User to play the game on three difficulty levels. The sco
 * Clone your new repo.
 
 ##Licensing
-All content is licensed under a MIT license.
+* All content is licensed under a MIT license.
